@@ -1,0 +1,40 @@
+<div class="px-8 py-4 navbar bg-white grid grid-cols-12 gap-5 sticky
+  shadow-lg
+"
+  [ngClass]="darkMode.theme === 'special' ? 'bg-screen text-white' :
+    darkMode.theme === 'white' ? 'bg-white text-gray-700' :
+    darkMode.theme === 'dark' ? 'bg-cyan-950 text-white' :
+        ''
+  "
+>
+  <a
+    class="btn bg-white hover:bg-slate-50 normal-case text-xl col-span-2 max-md:col-span-4 ml-8"
+    >Zelda</a
+  >
+
+  <div class="col-span-6"></div>
+
+  <div class="dropdown hidden md:block col-span-2">
+    <h3 tabindex="0" class="font-semibold"
+    
+    [ngClass]="darkMode.theme === 'special' ? 'text-white' :
+      darkMode.theme === 'white' ? 'text-gray-700' :
+      darkMode.theme === 'dark' ? 'text-white' :
+          ''
+    "
+
+    >Theme</h3>
+    <ul
+      tabindex="0"
+      class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 text-black"
+      
+      >  
+        <li><a (mouseenter)="onMouseEnter('white')" (mouseleave)="onMouseLeave()" (click)="setThemeMode('white')">White</a></li>
+        <li><a (mouseenter)="onMouseEnter('dark')" (mouseleave)="onMouseLeave()" (click)="setThemeMode('dark')">Dark</a></li>
+        <li><a (mouseenter)="onMouseEnter('special')" (mouseleave)="onMouseLeave()" (click)="setThemeMode('special')">Special</a></li>
+    </ul>
+  </div>
+  <div class="col-span-2">
+    <h3 class="font-semibold">Login</h3>
+  </div>
+</div>

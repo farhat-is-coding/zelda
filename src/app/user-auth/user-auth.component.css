@@ -1,0 +1,35 @@
+/* .img-container{
+    background-image: url('https://cdn.wikimg.net/en/zeldawiki/images/1/15/TotK_Link_Artwork.png?version=3b82ab3b1da77397c3a3239e57810376');
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+
+/* generate it linear gradient left to right */
+
+.bg-screen{
+    background: linear-gradient(90deg,#40B2DD, #57e1a1);
+}
+.bg-color{
+    background: linear-gradient(270deg,#40B2DD, #47b984);
+}
+
+.btn{
+    background: white;
+    color: #40B2DD
+}
+
+@keyframes move {
+    0% {
+      transform: translateX(-2px);
+    }
+    50% {
+      transform: translateX(2px);
+    }
+    100% {
+      transform: translateX(-2px);
+    }
+  }
+  
+  .animate-move {
+    animation: move 2.5s infinite ease-in-out;
+  }
