@@ -1,4 +1,4 @@
-<div class="px-8 py-4 navbar bg-white grid grid-cols-12 gap-5 sticky
+<div class="px-8 py-4 navbar grid grid-cols-12 gap-5 sticky
   shadow-lg
 "
   [ngClass]="darkMode.theme === 'special' ? 'bg-screen text-white' :
@@ -9,12 +9,13 @@
 >
   <a
     class="btn bg-white hover:bg-slate-50 normal-case text-xl col-span-2 max-md:col-span-4 ml-8"
+    routerLink="/"
     >Zelda</a
   >
 
   <div class="col-span-6"></div>
 
-  <div class="dropdown hidden md:block col-span-2">
+  <div class="dropdown hidden md:block">
     <h3 tabindex="0" class="font-semibold"
     
     [ngClass]="darkMode.theme === 'special' ? 'text-white' :
@@ -34,7 +35,10 @@
         <li><a (mouseenter)="onMouseEnter('special')" (mouseleave)="onMouseLeave()" (click)="setThemeMode('special')">Special</a></li>
     </ul>
   </div>
-  <div class="col-span-2">
-    <h3 class="font-semibold">Login</h3>
+  <div class="">
+    <h3 class="font-semibold" routerLink="/login">Login</h3>
+  </div>
+  <div class="">
+    <h3 class="font-semibold" routerLink="/store">Store</h3>
   </div>
 </div>

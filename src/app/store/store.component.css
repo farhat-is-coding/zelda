@@ -1,0 +1,63 @@
+.bg-screen{
+    background: linear-gradient(90deg,#40B2DD, #57e1a1);
+}
+.bg-color{
+    background: linear-gradient(270deg,#40B2DD, #47b984);
+}
+
+.btn{
+    background: white;
+    color: #40B2DD
+}
+
+
+.box{
+    @apply transition-transform duration-300 transform scale-100 hover:scale-105 cursor-pointer col-span-4 backdrop-blur-md bg-white/30 rounded-lg flex items-center justify-center
+
+}
+
+
+h1{
+    @apply text-3xl font-bold rounded-lg py-1.5 px-2 bg-opacity-50
+
+}
+.characters{
+    background: url('https://i0.wp.com/gamepleton.com/wp-content/uploads/2019/09/zelda-1.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+
+.locations{
+    background: url('https://images.nintendolife.com/95973cc50d4b5/zelda-tears-of-the-kingdom-all-shrine-locations-and-maps-1.900x.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+.items{
+    background: url('https://www.nintendojo.com/wp-content/uploads/2011/10/masthead_zeldaweaponry.jpg');
+    background-size: cover;
+    background-position: right;
+    background-position-x: 5%;
+    opacity: 0.7;
+}
+
+.weapons{
+    background: url('https://staticg.sportskeeda.com/editor/2023/05/f0918-16838773252067-1920.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+.bosses{
+    background: url('https://images.saymedia-content.com/.image/t_share/MTc2MjczNDg1MzkwODgxOTY1/top-ten-worst-zelda-bosses.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+.dungeon{
+    background: url('https://static.fandomspot.com/images/09/2796/00-featured-zelda-dungeons.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+

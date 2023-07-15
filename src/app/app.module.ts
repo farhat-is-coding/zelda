@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { NavComponent } from './nav/nav.component';
 import { DarkModeService } from './dark-mode.service';
+import { HomePageComponent } from './home-page/home-page.component';
+import { StoreComponent } from './store/store.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserAuthComponent,
-    NavComponent
+    NavComponent,
+    HomePageComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
