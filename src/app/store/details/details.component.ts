@@ -1,0 +1,179 @@
+import { Component } from '@angular/core';
+import { DarkModeService } from 'src/app/dark-mode.service';
+
+
+@Component({
+  selector: 'app-details',
+  templateUrl: './details.component.html',
+  styleUrls: ['./details.component.css']
+})
+export class DetailsComponent {
+  characters = [
+    {
+      "name": "Link",
+      "description": "Link (リンク Rinku?, LINK) is the main protagonist of the Legend of Zelda series. He is the everlasting hero of the setting, having appeared throughout the ages in a never-ending line of incarnations. The various heroes who use the name Link are courageous young boys or teenagers, often in green clothing, who leave their homes to save the world from evil forces threatening it.",
+      "image": "https://static.wikia.nocookie.net/zelda/images/5/57/Breath_of_the_Wild_Artwork_Link_%28Official_Artwork%29.png/revision/latest?cb=20160623185226",
+      "race": "Hylian",
+      "titles": [
+        "Hero of Hyrule",
+        "Legendary Hero",
+        "The Hero",
+        "THIEF",
+        "Hero of Time",
+        "Sworn Brother of the Gorons",
+        "Grasshopper",
+        "Master of the Rosa Sisters",
+        "Hero of the Essences of Time and Nature (Oracle of Ages)",
+        "Hero of the Essences of Time and Nature (Oracle of Seasons)",
+        "Hero of Winds",
+        "Waker of the Winds",
+        "Page",
+        "Knight",
+        "Swordsman",
+        "Small Fry",
+        "Hero Chosen by the Gods",
+        "Blue Eyed Beast",
+        "Hero's Shade",
+        "Hero Chosen by the Ocean King",
+        "Apprentice to the Hero",
+        "Half a Hero",
+        "Two-Thirds of a Hero",
+        "Goro-Link",
+        "Royal Engineer",
+        "Captain",
+        "The Goddess's Chosen Hero",
+        "Goddess's Knight",
+        "Hero Of Legend",
+        "Hero of Lorule",
+        "Hylian Champion",
+        "Champion of Hyrule",
+        "Master Sword's Chosen One",
+        "Knight of Hyrule",
+        "Imperial Guard Captain",
+        "Linky",
+        "Linny",
+        "Master Link",
+        "Hero of Twilight"
+      ],
+      "screens": [
+        {
+          "img": "https://images.nintendolife.com/710a843f95abe/zelda-tears-of-the-kingdom.large.jpg",
+          "description": "Link in Tears of Kingdom."
+        },
+        {
+          "img": "https://static.wikia.nocookie.net/zelda/images/7/70/Link_%28Mario_Kart_8%29.jpg/revision/latest?cb=20140827211010",
+          "description": "Link in Mario Kart 8."
+        },
+
+        {
+          "img": "https://static.wikia.nocookie.net/zelda/images/f/f8/Picture_of_the_Champions_%28Breath_of_the_Wild%29.jpg/revision/latest/scale-to-width-down/1000?cb=20180117121547",
+          "description": "Picture of the Champions (Breath of the Wild)"
+        }
+      ]
+    },
+    {
+      "name": "Princess Zelda",
+      "description": "Zelda, Princess of Hyrule, best known simply as Princess Zelda (ゼルダ姫 Zeruda-hime?, ZELDA) is the name for several female Hylians, usually members of the Royal Family of Hyrule, who often play an integral role in the series. Though each is the titular character of the Legend of Zelda series, the actual protagonist is each era's respective Link.",
+      "image": "https://static.wikia.nocookie.net/zelda/images/5/5f/Zelda_Artwork_%28Breath_of_the_Wild%29.png/revision/latest?cb=20170306081400",
+      "race": "Hylian",
+      "titles": [
+        "Princess of Hyrule",
+        "Skyward Sword",
+        "Spirit Maiden",
+        "Skyward Sword",
+        "Ocarina of Time"
+      ],
+      "screens": [
+        {
+          "img": "https://www.thefandomentals.com/wp-content/uploads/2017/07/breath-of-the-wild-zelda-featured.jpg",
+          "description": "Princess Zelda in Breath of the Wild."
+        }
+      ]
+    },
+    {
+      "name": "Impa",
+      "description": "Impa (インパ Inpa?, IMPA) is a recurring character in the Legend of Zelda series. She typically serves as a nursemaid and/or bodyguard to Princess Zelda and often offers guidance to Link. Until the release of Breath of the Wild, the Impa characters in Ocarina of Time and Skyward Sword were the only true confirmed Sheikah in all the series. Sheik was Princess Zelda's alter-ego and the other characters theorized as Sheikah were not confirmed by Nintendo until the release of Breath of the Wild. It is implied that the Impa from The Legend of Zelda and Zelda II: The Adventure of Link is a Hylian due to the fact that she does not have red eyes; however, this could be only a case of retcon by Nintendo.",
+      "image": "https://static.wikia.nocookie.net/zelda/images/9/90/Impa_Artwork_%28Skyward_Sword%29.png/revision/latest?cb=20111110194028",
+      "race": "Sheikah",
+      "titles": [
+        "Ocarina of Time"
+      ],
+      "screens": [
+        {
+          "img": "https://www.zeldadungeon.net/wp-content/uploads/2021/04/Young-Impa.png",
+          "description": "Young Impa."
+        }
+      ]
+    },
+    
+    {
+      "name": "Happy Mask Salesman",
+      "description": "The Happy Mask Salesman (お面屋 Omen'ya?, 'Mask Shop Owner') is a recurring character in the Legend of Zelda series. He is a traveling collector and seller of strange, rare, and unusual masks. He is often considered one of the most unnerving characters in the series, due to his erratic behavior, unpredictable temper, strange powers, and occasional displays of hysteric outbursts. Partly due to his unique and mysterious demeanor, there are many theories as to the Happy Mask Salesman's true identity and motives; in The Legend of Zelda: Majora's Mask, he gives Link many subtle hints that he may be more than a common collector of masks.",
+      "image": "https://static.wikia.nocookie.net/zelda/images/3/37/Happy_Mask_Salesman_Artwork_%28Majora%27s_Mask%29.png/revision/latest?cb=20111101130747",
+      "race": "Terminan Hylian",
+      "titles": [
+        "Human",
+        "Hylian"
+      ],
+      "screens": [
+        {
+          "img": "https://www.zeldadungeon.net/wp-content/uploads/2020/04/XMKDjjBjDiHdnaE0JMRI4owBrcvWr8imMC2t1ndhW88.jpg",
+          "description": "in Zelda Dungeon."
+        }
+      ]
+    },
+    {
+      "name": "Tingle",
+      "description": "Tingle (チンクル Chinkuru?, TINGLE) is a recurring character in the Legend of Zelda series. He is a thirty-five year old man who is obsessed with 'forest fairies'. Above all, Tingle's dream is to become a forest fairy himself, and dresses up in green costumes resembling the Hero's Clothes worn by Link, as he believes that these green clothes are the same as those worn by the 'forest fairies' he seeks to emulate.",
+      "image": "https://static.wikia.nocookie.net/zelda/images/2/2f/Tingle_Artwork_%28Majora%27s_Mask%29.png/revision/latest/scale-to-width-down/243?cb=20111101131122",
+      "race": "Terminan Hylian",
+      "titles": [
+        "The Reincarnated Fairy"
+      ],
+      "screens": [
+        {
+          "img": "https://cdn.vox-cdn.com/thumbor/OxmY8ZWe83aukvIk3D4XTobSXf4=/1400x1400/filters:format(png)/cdn.vox-cdn.com/uploads/chorus_asset/file/24671194/Tears_of_the_Kingdom_Tingle_s_outfit.png",
+          "description": "Tingle in Tears of Kingdom."
+        }
+      ]
+    }
+  ]
+
+  constructor(public darkMode: DarkModeService) { }
+
+  getMainDivClasses(): string {
+    if (this.darkMode.theme === 'special') {
+      return 'bg-screen text-white';
+    } else if (this.darkMode.theme === 'white') {
+      return 'bg-white text-gray-700';
+    } else if (this.darkMode.theme === 'dark') {
+      return 'bg-cyan-900 text-white';
+    } else {
+      return '';
+    }
+  }
+
+  getContentDivClasses(): string {
+    if (this.darkMode.theme === 'special') {
+      return 'bg-color text-white';
+    } else if (this.darkMode.theme === 'white') {
+      return 'bg-zinc-200 text-gray-700';
+    } else if (this.darkMode.theme === 'dark') {
+      return 'bg-cyan-950 text-white';
+    } else {
+      return '';
+    }
+  }
+
+  getH1Classes(): string {
+    if (this.darkMode.theme === 'special') {
+      return 'bg-color text-white';
+    } else if (this.darkMode.theme === 'white') {
+      return 'bg-zinc-200 text-gray-700';
+    } else if (this.darkMode.theme === 'dark') {
+      return 'bg-cyan-950 text-white';
+    } else {
+      return '';
+    }
+  }
+}

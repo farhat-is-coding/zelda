@@ -1,32 +1,38 @@
-<div class="min-h-screen flex justify-center items-center" [ngClass]="getMainDivClasses()">
+<div
+  class="min-h-screen flex justify-center items-center"
+  [ngClass]="getMainDivClasses()"
+>
+  <div
+    class="grid grid-cols-12 min-h-3/4 w-4/5 rounded-lg gap-5 p-2"
+    [ngClass]="getContentDivClasses()"
+  >
+    <div class="characters box category" 
+    [routerLink]="['/store/characters']"
+    >
+      <h1 [ngClass]="getH1Classes()">Characters</h1>
+    </div>
 
-    <div class="grid grid-cols-12 min-h-3/4 w-4/5 rounded-lg gap-5 p-2" [ngClass]="getContentDivClasses()">
+    <div class="locations box category">
+      <h1 [ngClass]="getH1Classes()">Locations</h1>
+    </div>
 
-        <div class="characters box category">
-            <h1 [ngClass]="getH1Classes()">Characters</h1>
-        </div>
+    <div class="items box category">
+      <h1 [ngClass]="getH1Classes()">Items</h1>
+    </div>
 
-        <div class="locations box category">
-            <h1 [ngClass]="getH1Classes()">Locations</h1>
-        </div>
+    <div class="weapons box category">
+      <h1 [ngClass]="getH1Classes()">Weapons</h1>
+    </div>
 
-        <div class="items box category">
-            <h1 [ngClass]="getH1Classes()">Items</h1>
-        </div>
+    <div class="bosses box category">
+      <h1 [ngClass]="getH1Classes()">Bosses</h1>
+    </div>
 
-        <div class="weapons box category">
-            <h1 [ngClass]="getH1Classes()">Weapons</h1>
-        </div>
+    <div class="dungeon box category">
+      <h1 [ngClass]="getH1Classes()">Dungeon</h1>
+    </div>
 
-        <div class="bosses box category">
-            <h1 [ngClass]="getH1Classes()">Bosses</h1>
-        </div>
-
-        <div class="dungeon box category">
-            <h1 [ngClass]="getH1Classes()">Dungeon</h1>
-        </div>
-
-        <!-- <div class="box characters category">
+    <!-- <div class="box characters category">
             <h1>Games</h1>
 
         </div>
@@ -34,6 +40,5 @@
         <div class="box characters category">
             <h1>hello</h1>
         </div> -->
-    </div>
-
+  </div>
 </div>

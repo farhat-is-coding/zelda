@@ -12,7 +12,7 @@
 
 
 .box{
-    @apply transition-transform duration-300 transform scale-100 hover:scale-105 cursor-pointer col-span-4 backdrop-blur-md bg-white/30 rounded-lg flex items-center justify-center
+    @apply transition-transform duration-300 transform scale-100 hover:scale-105 cursor-pointer col-span-4 backdrop-blur-md bg-white/30 rounded-lg flex items-end justify-end
 
 }
 

@@ -1,0 +1,17 @@
+<div class="min-h-screen grid grid-cols-12 p-8" [ngClass]="getMainDivClasses()">
+  <div class="col-span-3" *ngFor="let character of characters">
+    <div class="flex flex-col p-1 rounded-lg">
+      <img
+        class="h-64 object-cover rounded-lg"
+        [src]="character.screens[0].img"
+        alt="img"
+      />
+      <div class="flex flex-col text-lg">
+        <h1 class="bg-purple-400 px-4 rounded-lg font-bold ">
+            {{ character.name }}</h1>
+        <h1 class="bg-pink-400 px-4 rounded-lg  font-bold text-end">
+            {{ character.race }}</h1>
+      </div>
+    </div>
+  </div>
+</div>

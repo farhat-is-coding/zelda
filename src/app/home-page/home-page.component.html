@@ -1,4 +1,58 @@
-<div class="min-h-screen bg-img">
+<div class="min-h-screen bg-img flex flex-col">
+  <div class="example-container">
+    <h2>Gates</h2>
 
+    <div
+      cdkDropListOrientation="horizontal"
+      cdkDropList
+      #gatesList="cdkDropList"
+      [cdkDropListData]="gates"
+      [cdkDropListConnectedTo]="[rowOne, rowTwo]"
+      class="flex"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="p-8 mx-4 bg-gray-200" *ngFor="let item of gates" cdkDrag>
+        {{ item }}
+      </div>
+    </div>
+  </div>
 
+  <div class="w-3/4">
+    <h2>Row 1</h2>
+
+    <div
+      cdkDropListOrientation="vertical"
+      cdkDropList
+      #rowOne="cdkDropList"
+      [cdkDropListData]="row1"
+      [cdkDropListConnectedTo]="[gatesList, rowTwo]"
+      class=" flex flex-wrap"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="p-8 m-4 bg-gray-200" *ngFor="let item of row1" cdkDrag>
+        {{ item }}
+      </div>
+    </div>
+  </div>
+
+  <div class="w-3/4">
+    <h2>Row 1</h2>
+
+    <div
+      cdkDropListOrientation="horizontal"
+      cdkDropList
+      #rowTwo="cdkDropList"
+      [cdkDropListData]="row2"
+      [cdkDropListConnectedTo]="[gatesList, rowOne]"
+
+      class=" flex flex-wrap"
+      (cdkDropListDropped)="drop($event)"
+    >
+      <div class="p-8 m-4 bg-gray-200"
+       *ngFor="let item of row2" 
+       cdkDrag>
+        {{ item }}
+      </div>
+    </div>
+  </div>
 </div>
